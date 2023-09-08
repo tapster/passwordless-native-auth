@@ -1,0 +1,12 @@
+{
+    "settings": {},
+    "rules": [
+        {
+            "patterns": ["/auth"],
+            "properties": {
+                "controller": "authentication",
+                "presentation": "modal"
+            }
+        }
+    ]
+}

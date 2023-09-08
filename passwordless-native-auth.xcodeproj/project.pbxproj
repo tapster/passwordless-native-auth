@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2113142AAB85970074A276 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2113132AAB85970074A276 /* AuthViewModel.swift */; };
+		5B2113162AAB85C10074A276 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2113152AAB85C10074A276 /* AuthView.swift */; };
+		5B2113192AAB86740074A276 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 5B2113182AAB86740074A276 /* KeychainAccess */; };
+		5B21131C2AAB87230074A276 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21131B2AAB87230074A276 /* AuthenticationService.swift */; };
+		5B21131E2AAB879F0074A276 /* PathConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B21131D2AAB879F0074A276 /* PathConfiguration.json */; };
 		5B4CB3622AAB6A9D0084EA62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4CB3612AAB6A9D0084EA62 /* AppDelegate.swift */; };
 		5B4CB3642AAB6A9D0084EA62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4CB3632AAB6A9D0084EA62 /* SceneDelegate.swift */; };
 		5B4CB36B2AAB6A9D0084EA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4CB36A2AAB6A9D0084EA62 /* Assets.xcassets */; };
@@ -15,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B2113132AAB85970074A276 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		5B2113152AAB85C10074A276 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		5B21131B2AAB87230074A276 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		5B21131D2AAB879F0074A276 /* PathConfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PathConfiguration.json; sourceTree = "<group>"; };
 		5B4CB35E2AAB6A9D0084EA62 /* passwordless-native-auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "passwordless-native-auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4CB3612AAB6A9D0084EA62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4CB3632AAB6A9D0084EA62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B2113192AAB86740074A276 /* KeychainAccess in Frameworks */,
 				5B4CB37A2AAB6C7D0084EA62 /* Turbo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +45,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B2113112AAB85490074A276 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B2113152AAB85C10074A276 /* AuthView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B2113122AAB85510074A276 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5B2113132AAB85970074A276 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5B21131A2AAB870D0074A276 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B21131B2AAB87230074A276 /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5B4CB3552AAB6A9D0084EA62 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +91,9 @@
 				5B4CB3762AAB6BBF0084EA62 /* Assets */,
 				5B4CB3772AAB6BD40084EA62 /* Configuration */,
 				5B4CB3752AAB6B890084EA62 /* Delegates */,
+				5B21131A2AAB870D0074A276 /* Services */,
+				5B2113112AAB85490074A276 /* Views */,
+				5B2113122AAB85510074A276 /* ViewModels */,
 			);
 			path = "passwordless-native-auth";
 			sourceTree = "<group>";
@@ -83,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5B4CB36F2AAB6A9D0084EA62 /* Info.plist */,
+				5B21131D2AAB879F0074A276 /* PathConfiguration.json */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -105,6 +143,7 @@
 			name = "passwordless-native-auth";
 			packageProductDependencies = (
 				5B4CB3792AAB6C7D0084EA62 /* Turbo */,
+				5B2113182AAB86740074A276 /* KeychainAccess */,
 			);
 			productName = "passwordless-native-auth";
 			productReference = 5B4CB35E2AAB6A9D0084EA62 /* passwordless-native-auth.app */;
@@ -136,6 +175,7 @@
 			mainGroup = 5B4CB3552AAB6A9D0084EA62;
 			packageReferences = (
 				5B4CB3782AAB6C7D0084EA62 /* XCRemoteSwiftPackageReference "turbo-ios" */,
+				5B2113172AAB86740074A276 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 5B4CB35F2AAB6A9D0084EA62 /* Products */;
 			projectDirPath = "";
@@ -152,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4CB36E2AAB6A9D0084EA62 /* LaunchScreen.storyboard in Resources */,
+				5B21131E2AAB879F0074A276 /* PathConfiguration.json in Resources */,
 				5B4CB36B2AAB6A9D0084EA62 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +206,9 @@
 			files = (
 				5B4CB3622AAB6A9D0084EA62 /* AppDelegate.swift in Sources */,
 				5B4CB3642AAB6A9D0084EA62 /* SceneDelegate.swift in Sources */,
+				5B2113162AAB85C10074A276 /* AuthView.swift in Sources */,
+				5B2113142AAB85970074A276 /* AuthViewModel.swift in Sources */,
+				5B21131C2AAB87230074A276 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +416,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5B2113172AAB86740074A276 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		5B4CB3782AAB6C7D0084EA62 /* XCRemoteSwiftPackageReference "turbo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hotwired/turbo-ios";
@@ -383,6 +435,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5B2113182AAB86740074A276 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B2113172AAB86740074A276 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		5B4CB3792AAB6C7D0084EA62 /* Turbo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5B4CB3782AAB6C7D0084EA62 /* XCRemoteSwiftPackageReference "turbo-ios" */;
